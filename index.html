@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Чат</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div id="auth-view">
+  <div class="auth-card">
+    <h1>Чат</h1>
+    <div class="auth-tabs">
+      <button id="tab-login" class="auth-tab active">Вход</button>
+      <button id="tab-register" class="auth-tab">Регистрация</button>
+    </div>
+    <input id="auth-username" placeholder="Имя пользователя" autocomplete="username">
+    <input id="auth-password" type="password" placeholder="Пароль" autocomplete="current-password">
+    <button id="auth-submit" class="primary-btn">Войти</button>
+    <div id="auth-error" class="auth-error"></div>
+  </div>
+</div>
+
+<div id="app" style="display:none;">
+  <div id="channels-view">
+    <div class="top-bar">
+      <h1>Каналы</h1>
+      <button class="icon-btn" id="logout-btn" title="Выйти">⎋</button>
+    </div>
+    <div id="channel-list"></div>
+    <div class="new-ch-bar">
+      <input id="new-ch-input" placeholder="Название нового канала" maxlength="40">
+      <button id="new-ch-btn">+</button>
+    </div>
+  </div>
+
+  <div id="chat-view">
+    <div class="chat-header">
+      <button class="icon-btn" id="back-btn">←</button>
+      <div class="ch-name" id="chat-title">Канал</div>
+    </div>
+    <div id="messages"></div>
+    <div class="input-bar">
+      <textarea id="msg-input" placeholder="Сообщение…" rows="1"></textarea>
+      <button class="send-btn" id="send-btn">➤</button>
+    </div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
